@@ -9,13 +9,15 @@ import { bootstrapApplication } from '@angular/platform-browser';
   imports: [CommonModule],
   template: `
     <h1>Hello from {{name}}!</h1>
-    <a target="_blank" href="https://angular.io/start">
-      Learn more about Angular 
+    <a target="_blank" href="{{href}}">
+      {{content}}
     </a>
   `,
 })
 export class App {
+  content = 'Learn more about Angular';
   name = 'Angular';
+  href = 'https://angular.io/start';
 }
 
 bootstrapApplication(App);
